@@ -8,7 +8,6 @@
 // console.warn("This is warning!");
 // console.error("This is an error!");
 
-
 // 3> *****JAVASCRIPT VARIABLES*****
 // What are variables?? --> Containers to store data values.
 
@@ -19,7 +18,7 @@ var number2 = 89;
 // 4> *****DATA TYPES IN JS *******
 // String
 var str1 = "This is a string";
-var str2 = 'This is a string';
+var str2 = "This is a string";
 
 // Numbers
 var num1 = 673;
@@ -27,10 +26,10 @@ var num2 = 849.23;
 
 // OBJECTS
 var marks = {
-    ravi : 46,
-    harry : 81,
-    ankit : 100
-}
+  ravi: 46,
+  harry: 81,
+  ankit: 100,
+};
 // console.log(num1);
 // console.log(marks);
 
@@ -51,7 +50,7 @@ var n = null;
 2> REFERENCE DATA TYPES  -- Arrays, Objects 
 */
 
-var arr = [1,2,3,4,"ankit"];
+var arr = [1, 2, 3, 4, "ankit"];
 
 // console.log(arr);
 // console.log(arr[0]);
@@ -68,16 +67,15 @@ var b = 69;
 // console.log("The value of a * b = ", a*b);
 // console.log("The value of a / b = ", a/b);
 
-//*********ASSIGNMENT OPERATOR********* 
-var c = b ;
+//*********ASSIGNMENT OPERATOR*********
+var c = b;
 // c += 2; // c = c+2
 c -= 2; // c = c-2
 // console.log(c);
 
-
 // *******COMPARISON OPERATOR*****
-var x = 34 ; 
-var y = 67; 
+var x = 34;
+var y = 67;
 // console.log(x==y);
 // console.log(x>=y);
 // console.log(x<=y);
@@ -85,7 +83,7 @@ var y = 67;
 // console.log(x>y);
 
 // ****LOGICALL OPERATOR*****
-        // LOGICAL AND
+// LOGICAL AND
 // console.log(true && false);
 // console.log(true && true);
 // console.log(false && false);
@@ -99,16 +97,14 @@ var y = 67;
 // console.log(!true);
 // console.log(!false);
 
-
 // *******FUNCTION IN JAVASCRIPT********
-function avg(a,b)
-{
-    return (a+b)/2;
+function avg(a, b) {
+  return (a + b) / 2;
 }
 
 // DRY = DON'T REPEAT YOURSELF
-c1 = avg(4,8);
-c2 = avg(4,16);
+c1 = avg(4, 8);
+c2 = avg(4, 16);
 // console.log(c1,c2);
 
 // CONDITIONALS IN JS
@@ -157,4 +153,99 @@ else
 console.log("End of ladder!");
 */
 
+var arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(arr);
+// for(var i = 0; i<arr.length;i++)
+// {
+//     if(i==2)
+//     {
+//         // break;
+//         continue;
+//     }
+//     console.log(arr[i]);
+// }
+
+// arr.forEach(function(element)
+// {
+//     console.log(element);
+// })
+
+// const ac =0;
+// ac = ac+1;     //WONT CHANGE AS CONST VARIABLES ARE FIXED
+
+// let j = 0;
+// while(j<arr.length)
+// {
+//     console.log(arr[j]);
+//     j++;
+// }
+
+// do {
+//   console.log(arr[j]);
+//   j++;
+// } while (j < arr.length);
+// {
+// }
+
+let myArr = ["fan","camera",69,null,true];
+// ARRAY METHODS
+
+// console.log(myArr.length);
+// myArr.pop();                   //Removes last array
+// myArr.push("Ankit");           //Adds an array from right
+// myArr.shift();                 //Removes first array
+// myArr.unshift("Harry");           //Adds an array from left
+// console.log(myArr.unshift("Harry"));           //Adds an array from left
+
+const newLen = myArr.unshift("Ankit")
+// console.log(newLen);
+
+// console.log(myArr);
+
+// *******STRING METHODS********
+
+let myLovelyString = "Ankit is is fuckin awesome awesome!";
+// console.log(myLovelyString.length);
+// console.log(myLovelyString.indexOf("is"));
+// console.log(myLovelyString.lastIndexOf("is"));
+
+// console.log(myLovelyString.slice(1,10));   // SLICE PRINTS FROM N to N-1 INDEX
+// d=myLovelyString.replace("Ankit", "Raj")
+// d = d.replace("awesome", "shit");
+// console.log(d,myLovelyString);
+
+// **********DATE*******
+let myDate = new Date();
+// console.log(myDate);
+// console.log(myDate.getTime());
+// console.log(myDate.getFullYear());
+// console.log(myDate.getUTCDay());
+// console.log(myDate.getHours());
+
+
+// ***********DOM MANIPULATION*******
+
+let elem =document.getElementById('click')
+// console.log(elem);
+let elemClass = document.getElementsByClassName("container")
+// console.log(elemClass);
+// elemClass[0].style.background = "yellow";
+// elemClass[0].classList.add("bgprimary");
+// elemClass[0].classList.add("text-success");
+// console.log(elemClass[0].innerHTML);
+// console.log(elemClass[0].innerHTML);
+
+// console.log(elem.innerHTML);
+// console.log(elem.innerText);
+
+tn = document.getElementsByTagName("div");
+console.log(tn);
+createElement = document.createElement("p");
+createElement.innerText = "This is a crated para";
+tn[0].appendChild(createElement);
+createElement2 = document.createElement("b");
+createElement2.innerText = "This is a crated bold";
+tn[0].replaceChild(createElement2, createElement)
+
+// removeChild(element)           ----> Removes Child
 
