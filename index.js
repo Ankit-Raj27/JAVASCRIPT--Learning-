@@ -311,7 +311,33 @@ sum = (a,b) => {
 logKaro = () =>
 {
     document.querySelectorAll(".container")[1].innerHTML = "<b> SetTismout fired </b>"
-    console.log("I am your log.")
+    // console.log("I am your log.")
 } 
-// setTimeout(logKaro, 2000);
-setInterval(logKaro,2000);
+clr = setTimeout(logKaro, 5000);
+// setInterval(logKaro,2000); 
+// clr = setInterval(logKaro,2000); 
+
+// ********** use clearTimeOut/clearInterval to cancel setIntervals/setTimeOut
+
+// LOCAL STORAGE
+
+// localStorage.setItem("Name", "Ankit");
+// localStorage.getItem("Name")
+// localStorage.removeItem("Name")
+// localStorage.clear();
+
+// *******JSON********
+
+// obj = {name:"Ankit", length:1, "a":{this : 'tha"t'}};
+// jso =JSON.stringify(obj);
+// console.log(typeof obj)
+// console.log(typeof jso);
+// console.log(jso);
+
+// parsed = JSON.parse(`{"name":"Ankit","length":1,"a":{"this":"that"}}`);
+// console.log(parsed);
+
+/// Template Literals /  BACK TICKS
+
+a = 34;
+console.log(`this is my ${a}`)
