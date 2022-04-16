@@ -239,7 +239,7 @@ let elemClass = document.getElementsByClassName("container")
 // console.log(elem.innerText);
 
 tn = document.getElementsByTagName("div");
-console.log(tn);
+// console.log(tn);
 createElement = document.createElement("p");
 createElement.innerText = "This is a crated para";
 tn[0].appendChild(createElement);
@@ -249,3 +249,69 @@ tn[0].replaceChild(createElement2, createElement)
 
 // removeChild(element)           ----> Removes Child
 
+// ***** SELECTIGN USEING QUERY
+
+sel = document.querySelector(".container");
+// console.log(sel);
+sel = document.querySelectorAll(".container");
+// console.log(sel);
+
+//  EVENTS IN JAS
+
+function clicked()
+{
+    // console.log("The button was clicked");
+}
+
+window.onload = function()
+{
+    // console.log("The document was laoded.");
+}
+
+// firstContainer.addEventListener("click", function()
+// {
+//     document.querySelectorAll(".container")[1].innerHTML = "<b> We have clicked </b>"
+//     console.log("Clicked on container");
+// })
+
+// firstContainer.addEventListener("mouseover", function()
+// {
+//     console.log("Mouse on container");
+// })
+
+// firstContainer.addEventListener("mouseout", function()
+// {
+//     console.log("Mouse out of container");
+// })
+
+// let prevHTML = document.querySelectorAll(".container")[1].innerHTML;
+// firstContainer.addEventListener("mouseup", function()
+// {
+//     document.querySelectorAll(".container")[1].innerHTML = prevHTML;
+//     console.log("Mouse up when clicked on container");
+// })
+// firstContainer.addEventListener("mousedown", function()
+// {
+//     document.querySelectorAll(".container")[1].innerHTML = "<b> We have clicked </b>";
+//     console.log("Mouse down when clicked on container");
+// })
+
+
+// ***Arrow Function
+// function sum(a,b){
+//     return a+b;
+// }
+
+sum = (a,b) => {
+    return a+b;
+}
+
+// *****SET TIMEOUT AND SET INTERVAL
+
+logKaro = () =>
+{
+    document.querySelectorAll(".container")[1].innerHTML = "<b> SetTismout fired </b>"
+    console.log("I am your log.")
+} 
+// setTimeout(logKaro, 2000);
+setInterval(logKaro,2000);
